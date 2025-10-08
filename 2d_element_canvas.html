@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Canvas 2D element</title>
+</head>
+<body>
+    <h2>Insert 2D elements with canvas</h2>
+    <canvas id="mycanvas" width="600" height="400" style="border: 1px solid black;">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Background
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(0, 0, 600, 400);
+
+        //  rectangle
+        ctx.fillStyle = "red";
+        ctx.fillRect(50, 50, 200, 100);
+
+        // rectangle
+        ctx.fillStyle = "green";
+        ctx.fillRect(300, 50, 200, 100);
+
+        // circle
+        ctx.fillStyle = "yellow";
+        ctx.beginPath();
+        ctx.arc(150, 250, 50, 0, 2 * Math.PI);
+        ctx.fill();
+
+        //  circle
+        ctx.fillStyle = "purple";
+        ctx.beginPath();
+        ctx.arc(400, 250, 50, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // Borders around rectangles
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 5;
+        ctx.strokeRect(45, 45, 210, 110);
+        ctx.strokeRect(295, 45, 210, 110);
+    </script>
+</body>
+</html>
